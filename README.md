@@ -28,8 +28,8 @@ This challenge does **not** contain an exploitable vulnerability yet.
 ## Clone
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/vulnlab.git
-cd vulnlab
+git clone https://github.com/YOUR_USERNAME/VulnerabilitiesLab.git
+cd VulnerabilitiesLab
 ```
 
 ## Build
@@ -62,4 +62,3 @@ From there, inspect variables, pointers, memory, and stack frames as described i
 ## Purpose
 
 This project is an educational security lab. All vulnerabilities are intentionally created for experimentation and should be run only in an isolated environment you control.
-
