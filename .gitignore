@@ -1,0 +1,12 @@
+# Build output
+bin/
+
+# Object files
+*.o
+
+# Debugger files
+.gdb_history
+
+# Core dumps
+core
+core.*

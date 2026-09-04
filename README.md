@@ -2,63 +2,78 @@
 
 A hands-on C security lab for learning how memory corruption vulnerabilities work from the ground up.
 
-The project contains intentionally vulnerable C programs that can be analyzed and exploited in a controlled local environment. Each challenge focuses on understanding what happens in memory, how a vulnerability affects program behavior, and how the vulnerability can ultimately be mitigated.
+VulnerabilitiesLab is a progressive collection of small, intentionally vulnerable C programs designed to build a practical understanding of memory corruption, debugging, exploitation, and defense.
 
-## Current Challenge
+Each challenge builds on concepts introduced in previous challenges, progressing from understanding normal memory behavior to analyzing vulnerabilities, exploiting them in a controlled local environment, and applying mitigations.
 
-**Challenge 01 — Stack & Pointers**
+## Learning Approach
 
-Introduces:
+```text
+Understand → Observe → Exploit → Defend → Verify
+```
 
-* Stack memory
-* Local variables
-* Pointers and addresses
-* Stack frames
-* Inspecting memory with GDB
+The focus is on understanding **why** a vulnerability works, not simply following an exploit recipe.
 
-This challenge does **not** contain an exploitable vulnerability yet.
+## Environment
 
-## Requirements
-
+* C
 * GCC or Clang
 * GDB
-* Git
-* Linux, WSL, or another Unix-like environment
+* Make
+* Linux / WSL
 
-## Clone
+The lab is entirely local and does not require a network service or external target.
 
-```bash
-git clone https://github.com/YOUR_USERNAME/VulnerabilitiesLab.git
-cd VulnerabilitiesLab
-```
+## Challenges
+
+### Challenge 01 — Stack & Pointers
+
+Introduces the fundamentals of stack memory, pointers, addresses, and stack frames.
+
+See [`challenge01/README.md`](challenge01/README.md).
+
+### Challenge 02 — Out-of-Bounds Memory Access
+
+Introduces the first memory corruption vulnerability and examines its effects.
+
+See [`challenge02/README.md`](challenge02/README.md).
+
+*Additional challenges will be added progressively.*
 
 ## Build
 
-```bash
-gcc -g -O0 -Wall -Wextra challenge01.c -o challenge01
-```
-
-## Run
+From the repository root:
 
 ```bash
-./challenge01
+make
 ```
 
-## Debug with GDB
-
-```bash
-gdb ./challenge01
-```
-
-Inside GDB:
+Executables are placed in:
 
 ```text
-break main
-run
+bin/
 ```
 
-From there, inspect variables, pointers, memory, and stack frames as described in the challenge.
+For example:
 
-## Purpose
+```bash
+./bin/challenge01
+```
 
-This project is an educational security lab. All vulnerabilities are intentionally created for experimentation and should be run only in an isolated environment you control.
+## Debug
+
+```bash
+make debug
+```
+
+Or directly:
+
+```bash
+gdb ./bin/challenge01
+```
+
+## Safety
+
+This repository contains intentionally vulnerable programs for educational purposes.
+
+Run the challenges only in a controlled environment that you own or are authorized to use.
