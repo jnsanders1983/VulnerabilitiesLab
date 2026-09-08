@@ -1,0 +1,11 @@
+Chat paused until usage resets at 7:01 PM
+You’ve reached the limit for chats that include files or images. Start a new text-only chat or upgrade to continue now.
+
+(gdb) print secret
+$8 = 0
+(gdb) next
+8           printf("buffer: %p\n", (void *)buffer);
+(gdb) print secret
+$9 = 305419896
+(gdb) print &secret
+$10 = (int *) 0x7fffffffd93c
