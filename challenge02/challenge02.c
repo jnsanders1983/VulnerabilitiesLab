@@ -13,7 +13,8 @@ int main(void)
     buffer[2] = 3;
     buffer[3] = 4;
 
-    buffer[4] = 0x41414141;
+    int index = 4;
+    buffer[index] = 0x41414141;
 
     printf("buffer[0]: %d\n", buffer[0]);
     printf("buffer[1]: %d\n", buffer[1]);
