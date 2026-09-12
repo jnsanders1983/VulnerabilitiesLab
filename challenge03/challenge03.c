@@ -10,8 +10,11 @@ int main(void)
     buffer[2] = 3;
     buffer[3] = 4;
 
+    buffer[-1] = 0x41414141;
+   
     printf("buffer: %p\n", (void *)buffer);
     printf("target: 0x%x\n", target);
+    printf("target after overflow: 0x%x\n", target);
 
     return 0;
 }

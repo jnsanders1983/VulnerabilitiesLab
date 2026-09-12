@@ -38,6 +38,12 @@ Introduces the first memory corruption vulnerability and examines its effects.
 
 See [`challenge02/README.md`](challenge02/README.md).
 
+### Challenge 03 — Stack Corruption
+
+Understand how an out-of-bounds array access can corrupt another value stored on the stack.
+
+See [`challenge03/README.md`](challenge03/README.md).
+
 *Additional challenges will be added progressively.*
 
 ## Build
