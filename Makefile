@@ -12,7 +12,10 @@ SOURCE02 = challenge02/challenge02.c
 TARGET03 = $(BIN_DIR)/challenge03
 SOURCE03 = challenge03/challenge03.c
 
-all: $(TARGET01) $(TARGET02) $(TARGET03)
+TARGET04 = $(BIN_DIR)/challenge04
+SOURCE04 = challenge04/challenge04.c
+
+all: $(TARGET01) $(TARGET02) $(TARGET03) $(TARGET04)
 
 $(TARGET01): $(SOURCE01)
 	mkdir -p $(BIN_DIR)
@@ -26,6 +29,10 @@ $(TARGET03): $(SOURCE03)
 	mkdir -p $(BIN_DIR)
 	$(CC) $(CFLAGS) $(SOURCE03) -o $(TARGET03)
 
+$(TARGET04): $(SOURCE04)
+	mkdir -p $(BIN_DIR)
+	$(CC) $(CFLAGS) $(SOURCE04) -o $(TARGET04)
+
 clean:
 	rm -rf $(BIN_DIR)
 
@@ -37,3 +44,6 @@ debug02: $(TARGET02)
 
 debug03: $(TARGET03)
 	gdb ./$(TARGET03)
+
+debug04: $(TARGET04)
+	gdb ./$(TARGET04)
