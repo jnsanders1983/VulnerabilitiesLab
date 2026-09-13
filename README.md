@@ -8,7 +8,7 @@ Each challenge builds on concepts introduced in previous challenges, progressing
 
 ## Learning Approach
 
-```text
+```
 Understand → Observe → Exploit → Defend → Verify
 ```
 
@@ -16,11 +16,11 @@ The focus is on understanding **why** a vulnerability works, not simply followin
 
 ## Environment
 
-* C
-* GCC or Clang
-* GDB
-* Make
-* Linux / WSL
+- C
+- GCC or Clang
+- GDB
+- Make
+- Linux / WSL
 
 The lab is entirely local and does not require a network service or external target.
 
@@ -40,9 +40,15 @@ See [`challenge02/README.md`](challenge02/README.md).
 
 ### Challenge 03 — Stack Corruption
 
-Understand how an out-of-bounds array access can corrupt another value stored on the stack.
+Demonstrates how an out-of-bounds array access can corrupt another value stored on the stack.
 
 See [`challenge03/README.md`](challenge03/README.md).
+
+### Challenge 04 — Controlled Control Flow
+
+Demonstrates how an out-of-bounds write can corrupt a function pointer and redirect program control flow.
+
+See [`challenge04/README.md`](challenge04/README.md).
 
 *Additional challenges will be added progressively.*
 
@@ -50,32 +56,37 @@ See [`challenge03/README.md`](challenge03/README.md).
 
 From the repository root:
 
-```bash
+```
 make
 ```
 
 Executables are placed in:
 
-```text
+```
 bin/
 ```
 
 For example:
 
-```bash
+```
 ./bin/challenge01
 ```
 
 ## Debug
 
-```bash
-make debug
+Each challenge has its own debug target:
+
+```
+make debug01
+make debug02
+make debug03
+make debug04
 ```
 
 Or directly:
 
-```bash
-gdb ./bin/challenge01
+```
+gdb ./bin/challenge04
 ```
 
 ## Safety
